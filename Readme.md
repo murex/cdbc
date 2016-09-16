@@ -88,7 +88,7 @@ result res(stm.execute());
 
 ## Supported Compilers
 
-The code is know to work on the following compilers:
+The code is known to work on the following compilers:
 - Visual Studio 2008
 - GCC 3.4
 - clang 3.8
