@@ -4,7 +4,7 @@ Database access library for C++.
 
 ## About
 
-Why does C++ need another database access library? First, nothing as been standardized yet. Secondly, we did not found a library which satisfied our needs of abstraction:
+Why does C++ need another database access library? First, nothing has been standardized yet. Secondly, we did not found a library which satisfied our needs of abstraction:
 1. Driver abstraction: the API should be the same regardless of the database vendor.
 2. SQL syntax abstraction: the API user should be able to write portable SQL queries regardless of the underlying vendor.
 3. Runtime driver selection: user code should be able to switch accross database vendors at runtime without any need to recompile.
