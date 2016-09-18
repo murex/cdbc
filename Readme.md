@@ -15,6 +15,10 @@ Why does C++ need another database access library? First, nothing has been stand
 We have built upon the previous work of Johan Anhofer published as [N3886: A proposal to add a Database Access Layer to the Standard Library](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3886.pdf "N3886 draft"), amended it on some parts and completed it mainly on SQL dialect abstraction.
 We plan to write and submit a draft proposal to the C++ normalization committee.
 
+
+*We are currently open sourcing the library. We plan to finish this before mid October.*
+
+
 ## Documentation
 
 Here a very simple bootstrap example to perform a simple select on a `SQLite` in-memory database.
