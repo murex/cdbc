@@ -5,7 +5,7 @@
 # to native line endings on checkout.
 *.cpp text
 *.hpp text
-*.md text
+#*.md text
 
 # Declare files that will always have CRLF line endings on checkout.
 *.sln text eol=crlf
