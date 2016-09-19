@@ -5,10 +5,10 @@ Database access library for C++.
 ## About
 
 Why does C++ need another database access library? First, nothing has been standardized yet. Secondly, we did not found a library which satisfied our needs of abstraction:
-1. Driver abstraction: the API should be the same regardless of the database vendor.
-2. SQL syntax abstraction: the API user should be able to write portable SQL queries regardless of the underlying vendor.
-3. Runtime driver selection: user code should be able to switch accross database vendors at runtime without any need to recompile.
-4. No data model definition: user code should be able to access the database without providing the data model to the API. ORM should be built on top of `CDBC` and not the other way around.
+  1. Driver abstraction: the API should be the same regardless of the database vendor.
+  2. SQL syntax abstraction: the API user should be able to write portable SQL queries regardless of the underlying vendor.
+  3. Runtime driver selection: user code should be able to switch accross database vendors at runtime without any need to recompile.
+  4. No data model definition: user code should be able to access the database without providing the data model to the API. ORM should be built on top of `CDBC` and not the other way around.
 
 `CDBC` tries to answer those requirements by providing a common abstraction of sql execution accross databases and at the same time an abstraction of the SQL dialect used by database. It offers a low-level building block for applications and higher level frameworks alike.
 
