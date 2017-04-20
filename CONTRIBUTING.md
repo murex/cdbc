@@ -36,7 +36,7 @@ Guidelines for any code contributions:
   4. Please squash all commits for a change into a single commit (this can be done using `git rebase -i`). Do your best to have a [well-formed commit message][] for the change.
   5. Remember not to add sensitive/confidential data such as hard-coded passwords, client information, email addresses etc.
   6. Remove legacy code (and tests) where possible to keep the codebase clean.
-  7. Any contribution does not contain, nor is it accompanied by:
+  7. Any contribution must not contain, nor must be accompanied by:
    - materials not created by you, or source code or other materials which result in the inclusion of third party materials;
    - materials that would be considered confidential and/or proprietary information, or trade secrets owned by you or third parties;
    - your, our, or a third party’s, internal data, whether or not considered confidential and/or proprietary, e.g., intranet URLs, internal emails, client information or references to the foregoing;
