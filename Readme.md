@@ -7,10 +7,10 @@ Database access library for C++.
 Why does C++ need another database access library? First, nothing has been standardized yet. Secondly, we did not found a library which satisfied our needs of abstraction:
   1. Driver abstraction: the API should be the same regardless of the database vendor.
   2. SQL syntax abstraction: the API user should be able to write portable SQL queries regardless of the underlying vendor.
-  3. Runtime driver selection: user code should be able to switch accross database vendors at runtime without any need to recompile.
+  3. Runtime driver selection: user code should be able to switch across database vendors at runtime without any need to recompile.
   4. No data model definition: user code should be able to access the database without providing the data model to the API. ORM should be built on top of `CDBC` and not the other way around.
 
-`CDBC` tries to answer those requirements by providing a common abstraction of sql execution accross databases and at the same time an abstraction of the SQL dialect used by database. It offers a low-level building block for applications and higher level frameworks alike.
+`CDBC` tries to answer those requirements by providing a common abstraction of SQL execution across databases and at the same time an abstraction of the SQL dialect used by database. It offers a low-level building block for applications and higher level frameworks alike.
 
 We have built upon the previous work of Johan Anhofer published as [N3886: A proposal to add a Database Access Layer to the Standard Library](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3886.pdf "N3886 draft"), amended it on some parts and completed it mainly on SQL dialect abstraction.
 We plan to write and submit a draft proposal to the C++ normalization committee.
@@ -21,7 +21,7 @@ We plan to write and submit a draft proposal to the C++ normalization committee.
 
 ## Documentation
 
-Here a very simple bootstrap example to perform a simple select on a `SQLite` in-memory database.
+Here is a very simple bootstrap example to perform a simple select on a `SQLite` in-memory database.
 ```cpp
 #include <iostream>
 #include <string>
@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     cnx.open(":memory:");
     statement stm("select * from EMPLOYEES", cnx);
 
-    for (result res(stm.execute()); !res.is_eof(); res.move_next() {
+    for (result res(stm.execute()); !res.is_eof(); res.move_next()) {
         std::cout
             << "- "          << res.get<std::string>("NAME")
 	        << ", age:"      << res.get<int>("AGE")
@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
                     .select("NAME", "AGE", "SALARY")
                     .to_statement());
 
-    for (result res(stm.execute()); !res.is_eof(); res.move_next() {
+    for (result res(stm.execute()); !res.is_eof(); res.move_next()) {
         std::cout
             << "- "          << res.get<std::string>("NAME")
 	        << ", age:"      << res.get<int>("AGE")
